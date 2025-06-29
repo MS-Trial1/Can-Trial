@@ -3,56 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <title>Spinning Can</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background: white;
+      background: #fdf9f6; /* Elegant off-white */
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       overflow: hidden;
-      font-family: 'Arial Black', sans-serif;
+      font-family: 'Playfair Display', serif;
     }
 
-    .neon-text {
+    .background-text {
       position: absolute;
-      font-size: 64px;
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: bold;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
+      color: #000;
       z-index: 0;
-
-      /* Neon glow effect */
-      color: #ff00cc;
-      text-shadow:
-        0 0 5px #ff00cc,
-        0 0 10px #ff00cc,
-        0 0 20px #ff00cc,
-        0 0 40px #ff66cc,
-        0 0 60px #ff66cc,
-        0 0 80px #ff66cc;
+      line-height: 0.85;
+      letter-spacing: 2px;
     }
 
-.can {
-  height: 80vh;
-  width: auto;
-}
+    .background-text .line1 {
+      font-size: 4vw; /* Responsive large text */
+      font-weight: 900;
+    }
+
+    .background-text .line2 {
+      font-size: 4vw;
+      font-weight: 900;
+      margin-top: 0.5em;
+    }
+
+    .can {
+      height: 80vh;
+      width: auto;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* Optional soft text glow */
+    .background-text span {
+      text-shadow:
+        0 0 5px rgba(0, 0, 0, 0.05),
+        0 0 10px rgba(0, 0, 0, 0.05);
     }
   </style>
 </head>
 <body>
 
-  <!-- Neon glow text behind the can -->
-  <div class="neon-text">DESIGNED TO POP</div>
+  <!-- Elegant background text -->
+  <div class="background-text">
+    <div class="line1"><span>DESIGNED</span></div>
+    <div class="line2"><span>TO POP.</span></div>
+  </div>
 
-  <!-- Your spinning can video -->
-  <video class="can" autoplay loop muted playsinline>
-    <source src="Can.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <!-- Your transparent GIF can -->
+  <img class="can" src="can.gif" alt="Spinning Can">
 
 </body>
 </html>
+
