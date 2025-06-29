@@ -27,10 +27,11 @@
       z-index: 0;
       line-height: 0.85;
       letter-spacing: 2px;
+      pointer-events: none;
     }
 
     .background-text .line1 {
-      font-size: 4vw; /* Responsive large text */
+      font-size: 8vw;
       font-weight: 900;
     }
 
@@ -41,12 +42,12 @@
     }
 
     .can {
-  height: 80vh;
-  width: auto
-
+      height: 80vh;
+      width: auto;
+    
     }
 
-    /* Optional soft text glow */
+    /* Optional soft glow */
     .background-text span {
       text-shadow:
         0 0 5px rgba(0, 0, 0, 0.05),
@@ -56,14 +57,14 @@
 </head>
 <body>
 
-  <!-- Elegant background text -->
+  <!-- Neon-style bold background text -->
   <div class="background-text">
     <div class="line1"><span>DESIGNED</span></div>
     <div class="line2"><span>TO POP.</span></div>
   </div>
 
-  <!-- Your transparent GIF can -->
-  <img class="can" src="can.gif" alt="Spinning Can">
+  <!-- Transparent animated can -->
+  <img class="can" src="can.gif" alt="Spinning Can" />
 
 </body>
 </html>
