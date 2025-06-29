@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Spinning Can</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(to bottom, #1e1e2f, #3e3e5c); /* Navy Blue */
+      background: white;
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Arial Black', sans-serif;
     }
 
-    .can {
+    .neon-text {
+      position: absolute;
+      font-size: 64px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      z-index: 0;
+
+      /* Neon glow effect */
+      color: #ff00cc;
+      text-shadow:
+        0 0 5px #ff00cc,
+        0 0 10px #ff00cc,
+        0 0 20px #ff00cc,
+        0 0 40px #ff66cc,
+        0 0 60px #ff66cc,
+        0 0 80px #ff66cc;
+    }
+
+.can {
   height: 80vh;
   width: auto;
 }
+    }
   </style>
 </head>
 <body>
 
-  <!-- MP4 option -->
+  <!-- Neon glow text behind the can -->
+  <div class="neon-text">DESIGNED TO POP</div>
+
+  <!-- Your spinning can video -->
   <video class="can" autoplay loop muted playsinline>
-    <source src="Can.mp4" type="video/mp4">
+    <source src="Can.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-
-  <!-- Or, if you're using a GIF instead: -->
-  <!-- <img class="can" src="can.gif" alt="Spinning Can"> -->
 
 </body>
 </html>
