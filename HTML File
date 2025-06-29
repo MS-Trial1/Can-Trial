@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spinning Can</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom, #1e1e2f, #3e3e5c); /* Navy Blue */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .can {
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MP4 option -->
+  <video class="can" autoplay loop muted playsinline>
+    <source src="can.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Or, if you're using a GIF instead: -->
+  <!-- <img class="can" src="can.gif" alt="Spinning Can"> -->
+
+</body>
+</html>
