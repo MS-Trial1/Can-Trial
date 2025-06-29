@@ -3,66 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <title>Spinning Can</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background: #fdf9f6; /* Elegant off-white */
+      background: white;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       overflow: hidden;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Arial Black', sans-serif;
     }
 
-    .background-text {
+    .neon-text {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      font-size: 64px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
       text-align: center;
-      color: #000;
       z-index: 0;
-      line-height: 0.85;
-      letter-spacing: 2px;
-      pointer-events: none;
-    }
 
-    .background-text .line1 {
-      font-size: 8vw;
-      font-weight: 900;
-    }
-
-    .background-text .line2 {
-      font-size: 4vw;
-      font-weight: 900;
-      margin-top: 0.5em;
+      /* Neon glow effect */
+      color: #ff00cc;
+      text-shadow:
+        0 0 5px #ff00cc,
+        0 0 10px #ff00cc,
+        0 0 20px #ff00cc,
+        0 0 40px #ff66cc,
+        0 0 60px #ff66cc,
+        0 0 80px #ff66cc;
     }
 
     .can {
-      height: 80vh;
-      width: auto;
-    
-    }
-
-    /* Optional soft glow */
-    .background-text span {
-      text-shadow:
-        0 0 5px rgba(0, 0, 0, 0.05),
-        0 0 10px rgba(0, 0, 0, 0.05);
+      width: 500px;
+      z-index: 1;
+      position: relative;
     }
   </style>
 </head>
 <body>
 
-  <!-- Neon-style bold background text -->
-  <div class="background-text">
-    <div class="line1"><span>DESIGNED</span></div>
-    <div class="line2"><span>TO POP.</span></div>
-  </div>
-
+  <!-- Neon glow text behind the can -->
+  <div class="neon-text">DESIGNED TO POP</div>
 
   <!-- Your spinning can video -->
   <video class="can" autoplay loop muted playsinline>
@@ -72,4 +56,3 @@
 
 </body>
 </html>
-
