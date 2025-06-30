@@ -24,29 +24,30 @@
       transform: translate(-50%, -50%);
       text-align: center;
       color: #000;
-      z-index: -1;  /* push behind */
-      line-height: 0.85;
-      letter-spacing: 2px;
+      z-index: 0;
       pointer-events: none;
       user-select: none;
+      line-height: 0.85;
+      letter-spacing: -4px;
     }
 
     .background-text .line1 {
-      font-size: 8vw;
+      font-size: 17vw;
       font-weight: 900;
+      margin: 0;
     }
 
     .background-text .line2 {
-      font-size: 4vw;
+      font-size: 10vw;
       font-weight: 900;
-      margin-top: 0.5em;
+      margin: 0;
     }
 
     .can {
-      height: 60vh; /* smaller size */
+      height: 70vh;
       width: auto;
       position: relative;
-      z-index: 1;  /* ensure above text */
+      z-index: 1;
     }
   </style>
 </head>
@@ -54,11 +55,10 @@
 
   <div class="background-text">
     <div class="line1">DESIGNED</div>
-    <div class="line2">TO POP.</div>
+    <div class="line2">TO POP</div>
   </div>
 
-  <!-- Animated GIF can -->
-  <img class="can" src="I (2).gif" alt="Spinning Can" />
+  <img class="can" src="can.gif" alt="Spinning Can" />
 
 </body>
 </html>
