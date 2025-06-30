@@ -24,10 +24,11 @@
       transform: translate(-50%, -50%);
       text-align: center;
       color: #000;
-      z-index: 0;
+      z-index: -1;  /* push behind */
       line-height: 0.85;
       letter-spacing: 2px;
       pointer-events: none;
+      user-select: none;
     }
 
     .background-text .line1 {
@@ -41,10 +42,11 @@
       margin-top: 0.5em;
     }
 
-    .I (2) {
-      height: 80vh;
+    .can {
+      height: 60vh; /* smaller size */
       width: auto;
-     
+      position: relative;
+      z-index: 1;  /* ensure above text */
     }
   </style>
 </head>
@@ -55,7 +57,7 @@
     <div class="line2">TO POP.</div>
   </div>
 
-  <!-- Real working animated GIF -->
+  <!-- Animated GIF can -->
   <img class="can" src="I (2).gif" alt="Spinning Can" />
 
 </body>
