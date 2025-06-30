@@ -22,43 +22,49 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-align: center;
       color: #000;
-      z-index: -1;  /* push behind */
-      line-height: 0.85;
-      letter-spacing: 2px;
-      pointer-events: none;
+      z-index: -1;  /* behind the can */
       user-select: none;
+      text-align: center;
+      width: 20vw; /* fixed width for both lines */
+      line-height: 1;
+      letter-spacing: 2px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .background-text .line1,
+    .background-text .line2 {
+      width: 100%; /* fill the container width */
+      margin: 0;
+      padding: 0;
     }
 
     .background-text .line1 {
       font-size: 8vw;
-      font-weight: 900;
     }
 
     .background-text .line2 {
-      font-size: 4vw;
-      font-weight: 900;
-      margin-top: 0.5em;
+      font-size: 8vw;
+      margin-top: 0.1em;
     }
 
     .can {
-      height: 60vh; /* smaller size */
+      height: 60vh;
       width: auto;
       position: relative;
-      z-index: 1;  /* ensure above text */
+      z-index: 1;  /* on top */
     }
   </style>
 </head>
 <body>
 
   <div class="background-text">
-    <div class="line1">DESIGNED</div>
-    <div class="line2">TO POP.</div>
+    <p class="line1">DESIGNED</p>
+    <p class="line2">TO POP.</p>
   </div>
 
-  <!-- Animated GIF can -->
   <img class="can" src="I (2).gif" alt="Spinning Can" />
 
 </body>
-</html>" 
+</html>
