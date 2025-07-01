@@ -1,63 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Spinning Can</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: #fdf9f6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      font-family: 'Anton', sans-serif;
-    }
+<style>
+  .background-text {
+    position: absolute;
+    top: 50%;
+    left: 40%; /* move closer to center */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: right; /* right-aligned text */
+    width: 30vw;
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    user-select: none;
+  }
 
-    .background-text {
-      position: absolute;
-      top: 50%;
-      left: 25%; /* moved left */
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      text-align: left;
-      width: 30vw;
-      line-height: 0.95;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      user-select: none;
-    }
+  .background-text p {
+    margin: 0;
+    padding: 0;
+    font-size: 8vw;
+    font-weight: 900;
+    background: linear-gradient(120deg, #5f27cd, #1e3a8a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-    .background-text p {
-      margin: 0;
-      padding: 0;
-      font-size: 8vw;
-      font-weight: 900;
-      background: linear-gradient(120deg, #5f27cd, #1e3a8a); /* purple to navy */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .can {
-      height: 55vh;
-      width: auto;
-      position: relative;
-      z-index: 1;
-      margin-top: 2vh;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="background-text">
-    <p>DESIGNED</p>
-    <p>TO&nbsp;POP.</p>
-  </div>
-
-  <img class="can" src="I (2).gif" alt="Spinning Can" />
-
-</body>
-</html>
+  .can {
+    height: 55vh;
+    width: auto;
+    position: relative;
+    z-index: 1;
+    margin-top: 2vh;
+  }
+</style>
